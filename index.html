@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Confession</h1>
+    <h2>Cotton University</h2>
+    <p>Department of Computer Science & IT</p>
+    <form name="submit-to-google-sheet">
+        <label for="Name or Anonymous">Name / Anonymous:</label>
+        <input type="text" id="Name or Anonymous" name="Name or Anonymous" required placeholder="Enter your Name">
+        
+        <label for="confession">Confession:</label>
+        <textarea id="confession" name="confession" required placeholder="Write your confession here..."></textarea>
+        
+        <button type="submit">Submit Confession</button>
+    </form>
+    
+    <section id="confessionsList">
+        
+        <p>Your confession will be recorded securely in our database.</p>
+    </section>
+    
+    <!-- <script src="app.js"></script> -->
+
+
+      
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxg7hbmAEBsbWVH6JFMS1aPe2RO54GFiIDHP-m2U0XWFE903Xj77LVqFsYd8BIkCrlH9Q/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert('Thankyou for your Response !', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      
+        <marquee> Please wait for the pop-up saying "Thank you for your response." This indicates that your confession has been successfully saved to our database.</marquee>
+        <footer>
+          <p>Made with love by <a href="#">Samir</a></p>
+      </footer>
+     
+      
+      
+</body>
+</html>
