@@ -170,7 +170,7 @@ footer a:hover {
 
 @media (max-width: 480px) {
      body {
-        background-image: url('Image3.png'); /* Change background for small screens */
+        background-image: url('Image2.png'); /* Change background for small screens */
     }
     h1 {
         font-size: 1.5em;
