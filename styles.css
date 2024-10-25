@@ -48,6 +48,13 @@ h3 {
     text-align: center;
 }
 
+ hr {
+    border: none;
+    border-top: 2px solid black; /* Change thickness and color */
+    width: 80%;                  /* Change width */
+    margin: 20px auto;           /* Center and space above/below */
+  }
+
 p {
     font-size: 1.1em;
     color: #555;
