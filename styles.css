@@ -9,7 +9,7 @@ body {
     background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.95), rgba(245, 245, 245, 0.95)),
                 url('https://www.transparenttextures.com/patterns/paper.png') center/cover no-repeat; /* Example paper texture URL */
    
-    background-image: url('Image.png')
+    background-image: url('Image.png');
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repeating */
