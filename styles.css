@@ -8,7 +8,7 @@
 body {
     background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.95), rgba(245, 245, 245, 0.95)),
                 url('https://www.transparenttextures.com/patterns/paper.png') center/cover no-repeat; /* Example paper texture URL */
-    background-image: url('https://drive.google.com/file/d/1w3JahRtNSsAZRg39JiHryInoNZDGjzyv/view?usp=sharing')
+    background-image: url('Image.png')
     font-family: 'Arial', sans-serif;
     color: #333;
     display: flex;
