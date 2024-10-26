@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <br>
+    <br>
+    <h1>Confession</h1>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <h2>Cotton University</h2>
+    <h3>Department Of Computer Science & IT</h3>
+    <form name="submit-to-google-sheet">
+        <label for="Name or Anonymous">Name / Anonymous:</label>
+        <input type="text" id="Name or Anonymous" name="Name or Anonymous"  placeholder="Enter your Name or Anonymous">
+        
+        <label for="confession">Confession:</label>
+        <textarea id="confession" name="confession" required placeholder="Write your confession here..."></textarea>
+        
+        <button type="submit">Submit Confession</button>
+    </form>
+    
+    <section id="confessionsList">
+        
+        <p><marquee style="color: rgb(24, 1, 1);"> Please wait for the pop-up saying "Thank you for your response." This indicates that your confession has been successfully saved to our database.</marquee></p>
+    </section>
+    <!-- <script src="app.js"></script> -->
+
+
+      
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxg7hbmAEBsbWVH6JFMS1aPe2RO54GFiIDHP-m2U0XWFE903Xj77LVqFsYd8BIkCrlH9Q/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert('Thankyou for your Response !', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+      
+     
+    
+        <footer>
+          
+         <p>Your confession will be recorded securely to our database</p>
+          <p>Made with love by <a href="#">Samir & Koushik</a></p>
+      </footer>
+     
+      
+      
+</body>
+</html>
